@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #d3d3d3;
+    position: relative;
+  }
+  
+  /* Imagen de fondo */
+  .background-image {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    background: url('img/background.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+  }
+  
+  .login-container {
+    display: flex;
+    max-width: 800px;
+    width: 90%;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Sección de Bienvenida (Izquierda) */
+  .welcome-section {
+    background-color: #f2f2f2; /* Color gris claro */
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .welcome-section h2 {
+    text-align: center;
+    color: #222;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .profile-photo {
+    margin-bottom: 10px;
+  }
+  
+  .profile-photo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  .additional-text {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Sección del Formulario (Derecha) */
+  .form-section {
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f2f2f2; /* Mismo color gris claro */
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #ff4747;
+    box-shadow: 0 0 8px rgba(255, 71, 71, 0.4);
+    outline: none;
+  }
+  
+  /* Botón Remember */
+  .remember-button {
+    width: 100%; /* Ajuste de ancho completo */
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .remember-button:hover {
+    background-color: #555;
+  }
+  
+  /* Botón Login con mismo ancho que Remember */
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .login-button {
+    width: 100%; /* Ajuste de ancho completo */
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff4747;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+  }
+  
+  .login-button:hover {
+    background-color: #e63939;
+    transform: translateY(-2px);
+  }
+  
+  .login-button:active {
+    background-color: #c93030;
+    transform: translateY(1px);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      max-width: 90%;
+    }
+  
+    .welcome-section, .form-section {
+      width: 100%;
+    }
+  }
+  
