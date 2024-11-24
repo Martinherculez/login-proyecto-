@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el contenido esté en columna */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    /* Asegura que el contenido principal ocupe el espacio restante */
+}
+
+.menu {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    flex: 0 0 20%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.menu:hover {
+    background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #1e90ff;
+}
+
+.contenido {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    flex: 1;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+.contenido:hover {
+    background: linear-gradient(135deg, #fcb69f, #ffecd2);
+}
