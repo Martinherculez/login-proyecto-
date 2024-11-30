@@ -7,13 +7,15 @@ function mostrarFormularioIngreso($mensaje)
 ?>
         <form action="/controllers/controladorIngresarUsuario.php" method="POST">
             <label for="datusiario"> usuario </label>
-            <input type="text" name="datusuario" id="datusuario">
+            <input type="text" name="datusuario" id="datusuario" autocomplete="off">
+            <br>
             <br>
             <label for="datpassword"> Password </label>
-            <input type="password" name="datpassword" id="datpassword">
+            <input type="password" name="datpassword" id="datpassword" autocomplete="off">
             <br>
-            <label for="datperfil"> Password </label>
-            <input type="text" name="datperfil" id="datperfil">
+            <br>
+            <label for="datperfil"> Perfil </label>
+            <input type="text" name="datperfil" id="datperfil" autocomplete="off">
             <br>
             <button type="submit"> Registrar usuario </button>
         </form>

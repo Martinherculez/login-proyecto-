@@ -3,9 +3,9 @@
 session_start();
 
 if (!isset($_SESSION["txtusername"])) {
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+    //require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
     header('location: ' . get_UrlBase('index.php'));
-    exit();
+    //exit();
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
@@ -17,8 +17,8 @@ $pdo = $conexion->obtenerConexion();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $tmpdatusuario = $_POST["datusuario"];
-    $tmpdatpassword = isset($_POST["datpassword"]) ? $_POST["datpassword"] : null;
-    $tmpdatperfil = isset($_POST["datperfil"]) ? $_POST["datperfil"] : null;
+    //$tmpdatpassword = isset($_POST["datpassword"]) ? $_POST["datpassword"] : null;
+    //$tmpdatperfil = isset($_POST["datperfil"]) ? $_POST["datperfil"] : null;
 
 
 

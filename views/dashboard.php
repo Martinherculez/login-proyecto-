@@ -65,13 +65,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
                             echo "<iframe src='" . get_controllers("controladorUsuario.php") . "' ></iframe>";
                             break;
                         case 'ingresar':
-                            echo "<iframe src='" . get_views("ingresardatos.php") . "' ></iframe>";
+                            echo "<iframe src='" . get_controllers("controladorIngresarUsuario.php") . "' ></iframe>";
                             break;
                         case 'modificar':
-                            echo "<iframe src='" . get_views("modificardatos.php") . "' ></iframe>";
+                            echo "<iframe src='" . get_controllers("controladorActualizarUsuario.php") . "' ></iframe>";
                             break;
                         case 'eliminar':
-                            echo "<iframe src='" . get_views("eliminardatos.php") . "' ></iframe>";
+                            echo "<iframe src='" . get_controllers("controladorEliminarUsuario.php") . "' ></iframe>";
                             break;
                         default:
                             echo "<h1>Opción no válida</h1>";

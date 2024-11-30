@@ -12,6 +12,7 @@ if (!isset($_SESSION["txtusername"])) {
     header('location: ' . get_UrlBase('index.php'));
 }
 
+//echo "desde el controlador";
 
 $mensaje = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,18 +21,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tmpdatpassword = $_POST["datpassword"];
     $tmpdatperfil = $_POST["datperfil"];
 
-
-
     $modeloUsuario = new modeloUsuario();
+
+    //echo "desde el controlador";
+    //var_dump ($modeloUsuario);
 
     try {
 
         $modeloUsuario->insertarUsuario($tmpdatusuario, $tmpdatpassword, $tmpdatperfil);
-        $mensaje = "USUARIO RESGISTRADO CON EXITO <br>";
+        $mensaje = "USUARIO RESGISTRADO CON EXITO .... ";
     } catch (PDOException $e) {
         $mensaje = "Error al registrar el usuario ...<br>" . $e->getMessage();
     }
-    exit(); // cortar la ejecucion
+   
+
+    //echo "desde el controlador";
+    //echo $mensaje;
+    //exit(); // cortar la ejecucion
 }
 
 mostrarFormularioIngreso($mensaje);
